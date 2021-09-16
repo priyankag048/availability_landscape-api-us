@@ -27,7 +27,7 @@ pipeline {
             withCredentials([file(credentialsId: 'kubeConfig', variable: 'KUBECONFIG')]) {
               sh '''
                 helm package ./availability_service/helm-chart -d helm-logs
-                helm upgrade --install --atomic --wait availability helm-logs/availability-chart-0.1.0.tgz -f values.yaml 
+                helm upgrade --install --atomic --wait availability-landscape-us helm-logs/availability-chart-0.1.0.tgz -f values.yaml 
               '''
             }
           }
