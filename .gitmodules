@@ -1,0 +1,3 @@
+[submodule "availability_service"]
+	path = availability_service
+	url = git@github.com:priyankag048/availability_service.git
